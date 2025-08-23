@@ -30,109 +30,189 @@
             <section class="content-section">
                 <div class="section-header">
                     <h1 class="section-title">Professional Experience</h1>
-                    <p class="section-subtitle">Building innovative solutions across diverse industries</p>
+                    <p class="section-subtitle">Delivering innovative solutions across diverse technical domains</p>
                 </div>
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <h3 class="experience-title">Software QA Engineer</h3>
-                                    <div class="experience-company">Samsung Electronics</div>
-                                    <div class="experience-period">2023 - Present</div>
-                                </div>
-                                
-                                <div class="experience-description">
-                                    <p>Led transformative AI initiatives to revolutionize quality assurance processes and customer experience analytics.</p>
-                                </div>
+                <!-- Skills Highlight Section -->
+                <div class="skills-highlight">
+                    <h2 class="skills-highlight-title">Core Expertise</h2>
+                    <div class="skills-grid">
+                        <div class="skill-highlight-card">
+                            <div class="skill-icon">🤖</div>
+                            <h3>LLM Integration</h3>
+                            <p>Advanced prompt engineering and AI model optimization</p>
+                        </div>
+                        <div class="skill-highlight-card">
+                            <div class="skill-icon">⚡</div>
+                            <h3>Automation & Scripting</h3>
+                            <p>Python automation and process optimization</p>
+                        </div>
+                        <div class="skill-highlight-card">
+                            <div class="skill-icon">🔧</div>
+                            <h3>QA System Design</h3>
+                            <p>End-to-end testing architecture and implementation</p>
+                        </div>
+                        <div class="skill-highlight-card">
+                            <div class="skill-icon">📊</div>
+                            <h3>AI-Powered Analysis</h3>
+                            <p>Data classification and insights generation</p>
+                        </div>
+                        <div class="skill-highlight-card">
+                            <div class="skill-icon">🤝</div>
+                            <h3>Cross-Functional Collaboration</h3>
+                            <p>Strategic partnerships and vendor management</p>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="experience-achievements">
-                                    <h4>Key Achievements</h4>
-                                    <div class="achievement-grid">
-                                        <div class="achievement-item">
-                                            <div class="achievement-metric">24,000+</div>
-                                            <div class="achievement-desc">Records processed in VOC classification project</div>
-                                        </div>
-                                        <div class="achievement-item">
-                                            <div class="achievement-metric">83%</div>
-                                            <div class="achievement-desc">Precision improvement achieved</div>
-                                        </div>
-                                        <div class="achievement-item">
-                                            <div class="achievement-metric">97.5%</div>
-                                            <div class="achievement-desc">Recall rate accomplished</div>
-                                        </div>
-                                        <div class="achievement-item">
-                                            <div class="achievement-metric">400+ → 15</div>
-                                            <div class="achievement-desc">Hours reduced through LLM optimization</div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Samsung Experience Timeline -->
+                <div class="company-section">
+                    <div class="company-header">
+                        <h2 class="company-title">Samsung Electronics</h2>
+                        <div class="company-role">Software QA Engineer</div>
+                        <div class="company-period">2023 - Present</div>
+                    </div>
 
-                                <div class="experience-technologies">
-                                    <span class="tech-tag">Machine Learning</span>
-                                    <span class="tech-tag">LLM</span>
-                                    <span class="tech-tag">Data Classification</span>
-                                    <span class="tech-tag">Process Automation</span>
-                                    <span class="tech-tag">QA Systems</span>
+                    <div class="teams-timeline">
+                        <!-- MDE Team -->
+                        <div class="team-item">
+                            <div class="team-header" onclick="toggleTeamDetails('mde')">
+                                <div class="team-content">
+                                    <h3 class="team-name">MDE Team</h3>
+                                    <p class="team-description">Tests Galaxy compatibility with top U.S. SmartThings devices</p>
+                                </div>
+                                <div class="toggle-btn" id="mde-toggle">+</div>
+                            </div>
+                            <div class="team-details" id="mde-details">
+                                <div class="highlight-item">
+                                    <h4>QA System Design & Implementation</h4>
+                                    <p><strong>Key Action:</strong> Designed the complete QA process for the new U.S. MDE team by combining VOC insights, device usage data, and SmartThings protocol research.</p>
+                                    <p><strong>Impact:</strong> Built testing strategies covering the <strong>top 75%</strong> of U.S. SmartThings devices, ensuring Galaxy compatibility with critical third‑party products and enhancing customer experience.</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <h4>AI-Powered VOC Classification</h4>
+                                    <p><strong>Key Action:</strong> Built an automated VOC classification pipeline using AI and deployed it across the Mobile Quality Lab division.</p>
+                                    <p><strong>Impact:</strong> Processed <strong>24,000+</strong> reports, reducing analysis from <strong>400+</strong> manual hours to under <strong>15</strong> automated hours, and empowered <strong>10+</strong> QA teams to strengthen testing strategies and streamline defect analysis.</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <h4>Prompt Optimization</h4>
+                                    <p><strong>Key Action:</strong> Engineered optimized LLM prompts using few-shot learning, decision trees, and structured category rules.</p>
+                                    <p><strong>Impact:</strong> Improved recall from <strong>&lt;80%</strong> to <strong>97.5%</strong> and precision to <strong>83%</strong>, with the prompt framework adopted as the division-wide standard, driving consistency and accuracy across VOC classification.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Connected Car Team -->
+                        <div class="team-item">
+                            <div class="team-header" onclick="toggleTeamDetails('connected-car')">
+                                <div class="team-content">
+                                    <h3 class="team-name">Connected Car Team</h3>
+                                    <p class="team-description">Ensures seamless Android Auto & Bluetooth integration with major car vendors</p>
+                                </div>
+                                <div class="toggle-btn" id="connected-car-toggle">+</div>
+                            </div>
+                            <div class="team-details" id="connected-car-details">
+                                <div class="highlight-item">
+                                    <h4>Strategic Vendor Partnerships</h4>
+                                    <p><strong>Key Action:</strong> Drove communication with Google, Ford, Toyota, and <strong>10+</strong> U.S. car vendors to address ongoing market issues and manage high-value asset exchanges.</p>
+                                    <p><strong>Impact:</strong> Strengthened partnerships through asset exchanges worth <strong>$100K+</strong> and reduced issue resolution cycles from monthly to <strong>bi‑weekly</strong>, accelerating product quality improvements.</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <h4>Process Optimization & Automation</h4>
+                                    <p><strong>Key Action:</strong> Built inventory and issue tracking systems using Excel Visual Basic, advanced formulas, and macros to streamline workflows.</p>
+                                    <p><strong>Impact:</strong> Centralized and automated issue management for <strong>5</strong> team members across <strong>40+</strong> Android Auto test kits, enabling faster reporting and clear categorization by Android Auto version and issue type.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Hub Team -->
+                        <div class="team-item">
+                            <div class="team-header" onclick="toggleTeamDetails('ai-hub')">
+                                <div class="team-content">
+                                    <h3 class="team-name">AI Hub Team</h3>
+                                    <p class="team-description">Builds AI-driven testing strategies for voice and speech features</p>
+                                </div>
+                                <div class="toggle-btn" id="ai-hub-toggle">+</div>
+                            </div>
+                            <div class="team-details" id="ai-hub-details">
+                                <div class="highlight-item">
+                                    <h4>Automated ASR Test Case Generation</h4>
+                                    <p><strong>Key Action:</strong> Implemented a third‑party AI solution after deep market research to generate test cases validating Bixby voice assistant across diverse accent variations.</p>
+                                    <p><strong>Impact:</strong> Automated the creation of <strong>2,200+</strong> audio test cases, boosting test generation speed by <strong>2000%</strong> and expanding voice diversity coverage by <strong>1000%</strong>.</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <h4>Test Architecture Redesign</h4>
+                                    <p><strong>Key Action:</strong> Redesigned and standardized Bixby voice control test cases, replacing Korea-based cases with U.S.-specific scenarios to better reflect local usage patterns.</p>
+                                    <p><strong>Impact:</strong> Replaced <strong>30%+</strong> of original test cases and increased detection of U.S.-specific issues by <strong>250%</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Software Validation Team -->
+                        <div class="team-item">
+                            <div class="team-header" onclick="toggleTeamDetails('software-validation')">
+                                <div class="team-content">
+                                    <h3 class="team-name">Software Validation Team</h3>
+                                    <p class="team-description">Validates Galaxy core functions and drives test automation</p>
+                                </div>
+                                <div class="toggle-btn" id="software-validation-toggle">+</div>
+                            </div>
+                            <div class="team-details" id="software-validation-details">
+                                <div class="highlight-item">
+                                    <h4>Python Automation Optimization</h4>
+                                    <p><strong>Key Action:</strong> Optimized <strong>300+</strong> Python automation scripts validating all core Galaxy functions by defining expected behaviors for <strong>10+</strong> U.S. carriers and implementing workarounds for edge cases like network instability and SIM issues.</p>
+                                    <p><strong>Impact:</strong> Improved automation reliability, cutting false failures by <strong>40%</strong> and accelerating validation of Galaxy software releases.</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <h4>End-to-End Software Validation</h4>
+                                    <p><strong>Key Action:</strong> Executed manual and automated testing across Galaxy devices to ensure software stability before release.</p>
+                                    <p><strong>Impact:</strong> Validated <strong>300+</strong> test cases across <strong>10+</strong> U.S. carriers covering mobile data, 3rd‑party apps, messaging, and calling for all Galaxy models.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="experience-header">
-                                    <h3 class="experience-title">Senior VP of Athletics</h3>
-                                    <div class="experience-company">AKP Sports Foundation</div>
-                                    <div class="experience-period">2022 - 2023</div>
-                                </div>
-                                
-                                <div class="experience-description">
-                                    <p>Orchestrated large-scale sporting events and community engagement programs, managing strategic partnerships with professional athletes and organizations.</p>
-                                </div>
+                <!-- AKP Sports Foundation Experience -->
+                <div class="company-section">
+                    <div class="company-header">
+                        <h2 class="company-title">AKP Sports Foundation</h2>
+                        <div class="company-role">Senior VP of Athletics</div>
+                        <div class="company-period">2022 - 2023</div>
+                    </div>
+                    
+                    <div class="foundation-highlights">
+                        <p class="foundation-description">Orchestrated large-scale sporting events and community engagement programs, managing strategic partnerships with professional athletes and organizations.</p>
+                        
+                        <div class="foundation-achievements">
+                            <div class="achievement-highlight">
+                                <span class="achievement-number">1000+</span>
+                                <span class="achievement-text">Tournament participants hosted</span>
+                            </div>
+                            <div class="achievement-highlight">
+                                <span class="achievement-number">4</span>
+                                <span class="achievement-text">Professional athletes partnerships</span>
+                            </div>
+                        </div>
 
-                                <div class="experience-achievements">
-                                    <h4>Leadership Highlights</h4>
-                                    <ul class="achievement-list">
-                                        <li>Hosted national tournaments with 1000+ participants</li>
-                                        <li>Organized career fairs connecting athletes with industry opportunities</li>
-                                        <li>Established youth academies fostering next-generation talent</li>
-                                        <li>Facilitated professional athlete meet & greets and community outreach</li>
-                                    </ul>
+                        <div class="notable-athletes">
+                            <h4>Notable Professional Athletes</h4>
+                            <div class="athlete-grid">
+                                <div class="athlete-card">
+                                    <div class="athlete-name">Hwang Hee-chan</div>
+                                    <div class="athlete-sport">Professional Football</div>
                                 </div>
-
-                                <div class="notable-athletes">
-                                    <h4>Notable Professional Athletes Worked With</h4>
-                                    <div class="athlete-grid">
-                                        <div class="athlete-card">
-                                            <div class="athlete-name">Hwang Hee-chan</div>
-                                            <div class="athlete-sport">Professional Football</div>
-                                        </div>
-                                        <div class="athlete-card">
-                                            <div class="athlete-name">Daichi Kamada</div>
-                                            <div class="athlete-sport">Professional Football</div>
-                                        </div>
-                                        <div class="athlete-card">
-                                            <div class="athlete-name">Hosei Kijima</div>
-                                            <div class="athlete-sport">Professional Athletics</div>
-                                        </div>
-                                        <div class="athlete-card">
-                                            <div class="athlete-name">Yeo Junseok</div>
-                                            <div class="athlete-sport">Professional Sports</div>
-                                        </div>
-                                    </div>
+                                <div class="athlete-card">
+                                    <div class="athlete-name">Daichi Kamada</div>
+                                    <div class="athlete-sport">Professional Football</div>
                                 </div>
-
-                                <div class="experience-technologies">
-                                    <span class="tech-tag">Event Management</span>
-                                    <span class="tech-tag">Strategic Planning</span>
-                                    <span class="tech-tag">Partnership Development</span>
-                                    <span class="tech-tag">Community Engagement</span>
-                                    <span class="tech-tag">Leadership</span>
+                                <div class="athlete-card">
+                                    <div class="athlete-name">Hosei Kijima</div>
+                                    <div class="athlete-sport">Professional Athletics</div>
+                                </div>
+                                <div class="athlete-card">
+                                    <div class="athlete-name">Yeo Junseok</div>
+                                    <div class="athlete-sport">Professional Sports</div>
                                 </div>
                             </div>
                         </div>

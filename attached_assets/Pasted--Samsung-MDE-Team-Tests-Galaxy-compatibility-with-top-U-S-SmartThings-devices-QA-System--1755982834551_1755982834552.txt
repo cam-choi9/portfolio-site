@@ -1,0 +1,50 @@
+# Samsung
+
+## MDE Team — Tests Galaxy compatibility with top U.S. SmartThings devices.
+
+- QA System Design & Implementation
+
+  - Key Action: Designed the complete QA process for the new U.S. MDE team by combining VOC insights, device usage data, and SmartThings protocol research.
+  - Impact: Built testing strategies covering the top 75% of U.S. SmartThings devices, ensuring Galaxy compatibility with critical third‑party products and enhancing customer experience.
+
+- AI-Powered VOC Classification
+
+  - Key Action: Built an automated VOC classification pipeline using AI and deployed it across the Mobile Quality Lab division.
+  - Impact: Processed 24,000+ reports, reducing analysis from 400+ manual hours to under 15 automated hours, and empowered 10+ QA teams to strengthen testing strategies and streamline defect analysis.
+
+- Prompt Optimization
+  - Key Action: Engineered optimized LLM prompts using few-shot learning, decision trees, and structured category rules.
+  - Impact: Improved recall from <80% to 97.5% and precision to 83%, with the prompt framework adopted as the division-wide standard, driving consistency and accuracy across VOC classification.
+
+## Connected Car Team — Ensures seamless Android Auto & Bluetooth integration with major car vendors.
+
+- Strategic Vendor Partnerships
+
+  - Key Action: Drove communication with Google, Ford, Toyota, and 10+ U.S. car vendors to address ongoing market issues and manage high-value asset exchanges.
+  - Impact: Strengthened partnerships through asset exchanges worth $100K+ and reduced issue resolution cycles from monthly to bi‑weekly, accelerating product quality improvements.
+
+- Process Optimization & Automation
+  - Key Action: Built inventory and issue tracking systems using Excel Visual Basic, advanced formulas, and macros to streamline workflows.
+  - Impact: Centralized and automated issue management for 5 team members across 40+ Android Auto test kits, enabling faster reporting and clear categorization by Android Auto version and issue type.
+
+## AI Hub Team — Builds AI-driven testing strategies for voice and speech features.
+
+- Automated ASR Test Case Generation
+
+  - Key Action: Implemented a third‑party AI solution after deep market research to generate test cases validating Bixby voice assistant across diverse accent variations.
+  - Impact: Automated the creation of 2,200+ audio test cases, boosting test generation speed by 2000% and expanding voice diversity coverage by 1000%.
+
+- Test Architecture Redesign
+  - Key Action: Redesigned and standardized Bixby voice control test cases, replacing Korea-based cases with U.S.-specific scenarios to better reflect local usage patterns.
+    Impact: Replaced 30%+ of original test cases and increased detection of U.S.-specific issues by 250%
+
+## Software Validation Team — Validates Galaxy core functions and drives test automation.
+
+- Python Automation Optimization
+
+  - Key Action: Optimized 300+ Python automation scripts validating all core Galaxy functions by defining expected behaviors for 10+ U.S. carriers and implementing workarounds for edge cases like network instability and SIM issues.
+    Impact: Improved automation reliability, cutting false failures by 40% and accelerating validation of Galaxy software releases.
+
+- End-to-End Software Validation
+  - Key Action: Executed manual and automated testing across Galaxy devices to ensure software stability before release.
+  - Impact: Validated 300+ test cases across 10+ U.S. carriers covering mobile data, 3rd‑party apps, messaging, and calling for all Galaxy models.

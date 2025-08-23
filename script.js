@@ -222,8 +222,9 @@ function initProjectsPage() {
 // Experience page animations
 function initExperiencePage() {
     const achievementItems = document.querySelectorAll('.achievement-item');
+    const achievementHighlights = document.querySelectorAll('.achievement-highlight');
     
-    // Counter animation for achievement metrics
+    // Counter animation for achievement metrics (existing functionality)
     const observeAchievements = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -238,7 +239,22 @@ function initExperiencePage() {
 
     achievementItems.forEach(item => observeAchievements.observe(item));
 
-    // Timeline item stagger animation
+    // Counter animation for foundation achievement highlights (new functionality)
+    const observeFoundationAchievements = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const number = entry.target.querySelector('.achievement-number');
+                if (number && !number.dataset.animated) {
+                    number.dataset.animated = 'true';
+                    animateCounter(number);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    achievementHighlights.forEach(item => observeFoundationAchievements.observe(item));
+
+    // Timeline item stagger animation (existing functionality)
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach((item, index) => {
         item.style.opacity = '0';
@@ -250,6 +266,50 @@ function initExperiencePage() {
             item.style.transform = 'translateY(0)';
         }, index * 200 + 500);
     });
+
+    // Team item stagger animation (new functionality for team items)
+    const teamItems = document.querySelectorAll('.team-item');
+    teamItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            item.style.transition = 'all 0.6s ease-out';
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, index * 150 + 300);
+    });
+
+    // Skills grid animation (new functionality)
+    const skillCards = document.querySelectorAll('.skill-highlight-card');
+    skillCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            card.style.transition = 'all 0.5s ease-out';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 100 + 200);
+    });
+}
+
+// Toggle team details function (new functionality)
+function toggleTeamDetails(teamId) {
+    const details = document.getElementById(`${teamId}-details`);
+    const toggle = document.getElementById(`${teamId}-toggle`);
+    
+    if (details.classList.contains('expanded')) {
+        // Collapse
+        details.classList.remove('expanded');
+        toggle.classList.remove('active');
+        toggle.textContent = '+';
+    } else {
+        // Expand
+        details.classList.add('expanded');
+        toggle.classList.add('active');
+        toggle.textContent = '×';
+    }
 }
 
 // Research page animations
