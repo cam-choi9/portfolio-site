@@ -343,6 +343,7 @@ body {
     padding: 4rem;
     position: relative;
     z-index: 1;
+    padding-top: 6rem;
 }
 
 .section-header {
@@ -1698,6 +1699,7 @@ body {
 
     .content-section {
         padding: 2rem 1rem;
+        padding-top: 3rem;
     }
 
     .section-title {
