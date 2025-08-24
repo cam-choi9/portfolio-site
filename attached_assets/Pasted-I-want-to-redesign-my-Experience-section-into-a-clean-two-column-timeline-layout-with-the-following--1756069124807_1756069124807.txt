@@ -1,0 +1,55 @@
+I want to redesign my Experience section into a clean two-column timeline layout with the following requirements:
+
+Layout & Structure
+
+Left Column: Timeline with team names + dates.
+
+MDE (Mar 2025 – Present)
+
+Connected Car (Dec 2024 – Feb 2025)
+
+AI Hub (Jul 2024 – Nov 2024)
+
+Software Validation (Nov 2022 – Jun 2024)
+
+Next to each team, add a small ℹ️ info icon. When hovered, it shows a short tooltip:
+
+MDE → Tests Galaxy–SmartThings compatibility for U.S. devices
+
+Connected Car → Tests Android Auto & Bluetooth features across 40+ car kits
+
+AI Hub → Develops AI-driven validation for Bixby and other LLM-powered tools
+
+Software Validation → Validates Galaxy features across major U.S. carriers
+
+Right Column: Four concise highlights, styled distinctly from the timeline:
+
+Experience Highlights
+
+QA System Design & Implementation — Designed and built the QA process for U.S. MDE testing, leveraging VOC insights, usage data, and protocol research to ensure Galaxy compatibility with the top 75% of SmartThings devices.
+
+AI Integration in QA Workflows — Deployed AI-driven solutions like VOC classification and LLM‑optimized test case creation, accelerating analysis and standardizing prompt frameworks across the division.
+
+Automation & Process Optimization — Streamlined testing workflows by optimizing 300+ Python automation scripts and building Excel Visual Basic systems for inventory and issue tracking, reducing manual effort and improving reporting.
+
+Strategic Communication — Led vendor collaborations with Google, Ford, Toyota, and others to resolve compatibility issues faster, drive asset exchanges worth $100K+, and strengthen cross‑team partnerships.
+
+Styling Requirements
+
+Use a modern, AI-driven theme.
+
+Left column (timeline) → muted, subtle background with simple typography.
+
+Right column (highlights) → more vibrant colors, slightly larger fonts, better spacing.
+
+Ensure the titles and contents look visually distinct.
+
+Keep the layout fully responsive.
+
+Skills Section
+
+At the bottom, add a “Skills & Tools” section using bubble-style badges:
+LLM · Python · Excel (Visual Basic & Macros) · Automation · AI-Powered Analysis · QA Strategy · Prompt Engineering · Data Analysis
+
+Goal:
+A visually clean, two-column experience section where the left timeline shows roles + dates, and the right side highlights my key contributions with distinct styling.

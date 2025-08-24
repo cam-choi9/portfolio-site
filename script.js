@@ -221,55 +221,9 @@ function initProjectsPage() {
 
 // Experience page animations
 function initExperiencePage() {
-    const achievementItems = document.querySelectorAll('.achievement-item');
-    const achievementHighlights = document.querySelectorAll('.achievement-highlight');
-    
-    // Counter animation for achievement metrics (existing functionality)
-    const observeAchievements = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const metric = entry.target.querySelector('.achievement-metric');
-                if (metric && !metric.dataset.animated) {
-                    metric.dataset.animated = 'true';
-                    animateCounter(metric);
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-
-    achievementItems.forEach(item => observeAchievements.observe(item));
-
-    // Counter animation for foundation achievement highlights (new functionality)
-    const observeFoundationAchievements = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const number = entry.target.querySelector('.achievement-number');
-                if (number && !number.dataset.animated) {
-                    number.dataset.animated = 'true';
-                    animateCounter(number);
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-
-    achievementHighlights.forEach(item => observeFoundationAchievements.observe(item));
-
-    // Timeline item stagger animation (existing functionality)
+    // Timeline item stagger animation
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            item.style.transition = 'all 0.6s ease-out';
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, index * 200 + 500);
-    });
-
-    // Team item stagger animation (new functionality for team items)
-    const teamItems = document.querySelectorAll('.team-item');
-    teamItems.forEach((item, index) => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(30px)';
         
@@ -280,36 +234,80 @@ function initExperiencePage() {
         }, index * 150 + 300);
     });
 
-    // Skills grid animation (new functionality)
-    const skillCards = document.querySelectorAll('.skill-highlight-card');
-    skillCards.forEach((card, index) => {
+    // Highlight cards stagger animation
+    const highlightCards = document.querySelectorAll('.highlight-card');
+    highlightCards.forEach((card, index) => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
+        card.style.transform = 'translateY(30px)';
         
         setTimeout(() => {
-            card.style.transition = 'all 0.5s ease-out';
+            card.style.transition = 'all 0.6s ease-out';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, index * 100 + 200);
+        }, index * 100 + 500);
     });
+
+    // Skills badges animation
+    const skillBadges = document.querySelectorAll('.skill-badge');
+    skillBadges.forEach((badge, index) => {
+        badge.style.opacity = '0';
+        badge.style.transform = 'scale(0.8)';
+        
+        setTimeout(() => {
+            badge.style.transition = 'all 0.4s ease-out';
+            badge.style.opacity = '1';
+            badge.style.transform = 'scale(1)';
+        }, index * 50 + 800);
+    });
+
+    // Initialize tooltips
+    initTooltips();
 }
 
-// Toggle team details function (new functionality)
-function toggleTeamDetails(teamId) {
-    const details = document.getElementById(`${teamId}-details`);
-    const toggle = document.getElementById(`${teamId}-toggle`);
+// Tooltip functionality
+function initTooltips() {
+    const infoIcons = document.querySelectorAll('.info-icon');
+    const tooltip = document.getElementById('tooltip');
     
-    if (details.classList.contains('expanded')) {
-        // Collapse
-        details.classList.remove('expanded');
-        toggle.classList.remove('active');
-        toggle.textContent = '+';
-    } else {
-        // Expand
-        details.classList.add('expanded');
-        toggle.classList.add('active');
-        toggle.textContent = '×';
-    }
+    if (!tooltip) return;
+
+    infoIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function(e) {
+            const tooltipText = this.getAttribute('data-tooltip');
+            if (tooltipText) {
+                tooltip.textContent = tooltipText;
+                tooltip.classList.add('visible');
+                
+                // Position tooltip
+                const rect = this.getBoundingClientRect();
+                const tooltipRect = tooltip.getBoundingClientRect();
+                
+                let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+                let top = rect.top - tooltipRect.height - 10;
+                
+                // Ensure tooltip stays within viewport
+                if (left < 10) left = 10;
+                if (left + tooltipRect.width > window.innerWidth - 10) {
+                    left = window.innerWidth - tooltipRect.width - 10;
+                }
+                if (top < 10) {
+                    top = rect.bottom + 10;
+                }
+                
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
+            }
+        });
+
+        icon.addEventListener('mouseleave', function() {
+            tooltip.classList.remove('visible');
+        });
+    });
+
+    // Hide tooltip when scrolling
+    window.addEventListener('scroll', function() {
+        tooltip.classList.remove('visible');
+    });
 }
 
 // Research page animations
