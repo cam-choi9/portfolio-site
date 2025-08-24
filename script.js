@@ -278,20 +278,23 @@ function initTooltips() {
                 tooltip.textContent = tooltipText;
                 tooltip.classList.add('visible');
                 
-                // Position tooltip
-                const rect = this.getBoundingClientRect();
-                const tooltipRect = tooltip.getBoundingClientRect();
+                // Position tooltip to the right of the team name
+                const teamTitle = this.closest('.team-title');
+                const rect = teamTitle.getBoundingClientRect();
                 
-                let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-                let top = rect.top - tooltipRect.height - 10;
+                let left = rect.right + 15;
+                let top = rect.top + (rect.height / 2) - 15;
                 
                 // Ensure tooltip stays within viewport
-                if (left < 10) left = 10;
-                if (left + tooltipRect.width > window.innerWidth - 10) {
-                    left = window.innerWidth - tooltipRect.width - 10;
+                const tooltipRect = tooltip.getBoundingClientRect();
+                if (left + 250 > window.innerWidth - 10) {
+                    left = rect.left - 265;
                 }
                 if (top < 10) {
-                    top = rect.bottom + 10;
+                    top = 10;
+                }
+                if (top + 40 > window.innerHeight - 10) {
+                    top = window.innerHeight - 50;
                 }
                 
                 tooltip.style.left = left + 'px';
