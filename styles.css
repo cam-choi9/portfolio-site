@@ -538,16 +538,13 @@ body {
     font-weight: 500;
 }
 
-/* Two-Column Experience Layout */
-.experience-container {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 4rem;
+/* Experience Section Layout */
+.samsung-section, .akp-section {
     max-width: 1200px;
     margin: 0 auto 4rem auto;
 }
 
-.experience-container.akp-section {
+.akp-section {
     margin-top: 3rem;
     padding-top: 3rem;
     border-top: 1px solid rgba(100, 255, 218, 0.2);
@@ -555,11 +552,12 @@ body {
 
 /* Company Info Styles */
 .company-info {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .company-info-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #64ffda;
     margin-bottom: 0.5rem;
@@ -568,8 +566,16 @@ body {
 
 .company-info-period {
     color: #8892b0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
+}
+
+/* Highlights Grid */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 /* Left Column - Timeline */
@@ -683,13 +689,6 @@ body {
     flex-direction: column;
 }
 
-.highlights-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #64ffda;
-    margin-bottom: 2rem;
-    text-align: left;
-}
 
 .highlight-card {
     background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(16, 16, 30, 0.9) 100%);
@@ -1784,10 +1783,6 @@ body {
         font-size: 0.85rem;
     }
 
-    .highlights-title {
-        font-size: 1.8rem;
-        text-align: center;
-    }
 
     .highlight-card {
         padding: 1.5rem;
@@ -1804,6 +1799,19 @@ body {
 
     .skills-tools-title {
         font-size: 1.8rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .company-info-title {
+        font-size: 1.3rem;
+    }
+
+    .company-info-period {
+        font-size: 1rem;
     }
 
     .skills-badges {
