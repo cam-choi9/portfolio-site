@@ -312,49 +312,10 @@ function initTooltips() {
     });
 }
 
-// Research page animations
-function initResearchPage() {
-    const researchCards = document.querySelectorAll('.research-card');
-    
-    // Stagger animation for research cards
-    const observeResearch = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.dataset.animated) {
-                entry.target.dataset.animated = 'true';
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    entry.target.style.transition = 'all 0.6s ease-out';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 200);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    researchCards.forEach(card => observeResearch.observe(card));
-
-    // Future items hover effect
-    const futureItems = document.querySelectorAll('.future-item');
-    futureItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            const number = this.querySelector('.future-number');
-            number.style.transform = 'scale(1.2) rotate(5deg)';
-            number.style.color = '#1de9b6';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            const number = this.querySelector('.future-number');
-            number.style.transform = '';
-            number.style.color = '';
-        });
-    });
-}
 
 // Generic scroll animations
 function initScrollAnimations() {
-    const animateElements = document.querySelectorAll('.section-header, .experience-card, .project-card, .research-card');
+    const animateElements = document.querySelectorAll('.section-header, .experience-card, .project-card');
     
     const observeScroll = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -527,10 +488,6 @@ document.addEventListener('keydown', function(e) {
                 window.location.href = 'projects.html';
                 break;
             case '4':
-                e.preventDefault();
-                window.location.href = 'research.html';
-                break;
-            case '5':
                 e.preventDefault();
                 window.location.href = 'skills.html';
                 break;
