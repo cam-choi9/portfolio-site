@@ -1921,7 +1921,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .block-header .block-visual {
@@ -1931,24 +1931,27 @@ body {
 }
 
 .block-position {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    display: block;
     margin-bottom: 1rem;
+    clear: both;
+    width: 100%;
 }
 
 .position-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #64ffda;
+    color: #ffffff;
     line-height: 1.2;
+    display: block;
+    margin-bottom: 0.25rem;
 }
 
 .position-dates {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #a8b2d1;
+    color: #ffffff;
     opacity: 0.8;
+    display: block;
 }
 
 .block-action {
