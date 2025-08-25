@@ -1906,20 +1906,50 @@ body {
     z-index: 2;
 }
 
+.blocks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.blocks-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64ffda;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.column-icon {
+    font-size: 2rem;
+}
+
 .block {
     background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(16, 16, 30, 0.9) 100%);
     border: 1px solid rgba(100, 255, 218, 0.2);
     border-radius: 20px;
-    padding: 3rem;
+    padding: 2.5rem;
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 3rem;
+    grid-template-columns: 1fr 150px;
+    gap: 2rem;
     align-items: center;
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    flex: 1;
 }
 
 .block:hover {
@@ -1934,7 +1964,7 @@ body {
 }
 
 .block-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #64ffda;
     margin-bottom: 0.5rem;
@@ -1972,8 +2002,8 @@ body {
 }
 
 .block-visual {
-    width: 200px;
-    height: 150px;
+    width: 150px;
+    height: 120px;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -2021,21 +2051,46 @@ body {
     font-size: 3rem;
 }
 
+.placeholder-visual {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    position: relative;
+}
+
+.placeholder-visual::before {
+    content: "⚡";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
 /* Mobile Responsive Updates for Top Navigation */
 @media (max-width: 768px) {
     .feature-blocks {
         padding: 2rem;
     }
     
-    .block {
+    .blocks-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .column-title {
+        font-size: 1.5rem;
+    }
+    
+    .block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         padding: 2rem;
         text-align: center;
     }
     
     .block-visual {
         margin: 0 auto;
+        width: 120px;
+        height: 100px;
     }
     
     .top-nav {
@@ -2074,4 +2129,21 @@ body {
     .nav-menu {
         order: 2;
     }
+}
+
+/* Job Skills Section */
+.job-skills-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(16, 16, 30, 0.6) 0%, rgba(26, 26, 46, 0.4) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.job-skills-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #64ffda;
+    margin-bottom: 1rem;
+    text-align: center;
 }
