@@ -1919,21 +1919,33 @@ body {
 
 .block .block-visual {
     width: 100%;
-    height: 120px;
+    height: 80px;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
 
-.block-header {
-    margin-bottom: 1rem;
+.block-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.block-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.block-separator {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0.5rem;
 }
 
 .block-company {
-    display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #64ffda;
-    margin: 0.25rem 0;
 }
 
 .block-dates {
@@ -1941,15 +1953,9 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 
-.block-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-}
 
 .block-action {
     margin-top: 1.5rem;
@@ -2145,11 +2151,21 @@ body {
     }
     
     .block .block-visual {
-        height: 100px;
+        height: 60px;
+    }
+    
+    .block-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .block-separator {
+        display: none;
     }
     
     .block-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
     }
     
     .block-company {
