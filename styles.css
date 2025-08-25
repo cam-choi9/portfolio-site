@@ -1930,6 +1930,52 @@ body {
     flex-shrink: 0;
 }
 
+.block-position {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.position-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #64ffda;
+    line-height: 1.2;
+}
+
+.position-dates {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #a8b2d1;
+    opacity: 0.8;
+}
+
+.block-action {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.block-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(29, 233, 182, 0.1) 100%);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 8px;
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.block-button:hover {
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.2) 0%, rgba(29, 233, 182, 0.15) 100%);
+    border-color: rgba(100, 255, 218, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+}
+
 .column-title {
     font-size: 1.8rem;
     font-weight: 700;
@@ -2101,6 +2147,19 @@ body {
     .block-header .block-visual {
         width: 40px;
         height: 40px;
+    }
+    
+    .position-title {
+        font-size: 1rem;
+    }
+    
+    .position-dates {
+        font-size: 0.85rem;
+    }
+    
+    .block-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
     
     .column-title {
