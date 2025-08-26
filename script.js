@@ -494,3 +494,7 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+document.getElementById("resumeBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
+});
