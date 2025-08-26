@@ -107,7 +107,7 @@ function initHomePage() {
     
     if (typingText) {
         // Typing animation
-        const text = "AI & Backend Development Specialist";
+        const text = "AI-Driven Software Engineer & Entrepreneur";
         const speed = 100;
         let i = 0;
         
@@ -494,7 +494,13 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
-document.getElementById("resumeBtn").addEventListener("click", function(e) {
-    e.preventDefault();
-    alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
+// Resume button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const resumeBtn = document.getElementById("resumeBtn");
+    if (resumeBtn) {
+        resumeBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
+        });
+    }
 });
