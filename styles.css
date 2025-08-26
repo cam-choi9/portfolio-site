@@ -255,6 +255,7 @@ body {
     gap: 1.5rem;
     opacity: 0;
     animation: fadeInUp 1s ease-out 2.5s forwards;
+    flex-wrap: wrap;
 }
 
 .cta-button {
@@ -2290,6 +2291,7 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    align-items: flex-start;
 }
 
 .skill-bubble {
