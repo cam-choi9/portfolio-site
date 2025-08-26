@@ -54,6 +54,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize scroll animations
     initScrollAnimations();
+    
+    // Resume button functionality
+    const resumeBtn = document.getElementById("resumeBtn");
+    if (resumeBtn) {
+        resumeBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
+        });
+    }
 });
 
 // Get current page from URL
@@ -492,15 +501,5 @@ document.addEventListener('keydown', function(e) {
                 window.location.href = 'skills.html';
                 break;
         }
-    }
-});
-// Resume button functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const resumeBtn = document.getElementById("resumeBtn");
-    if (resumeBtn) {
-        resumeBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
-        });
     }
 });
