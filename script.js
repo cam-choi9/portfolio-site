@@ -229,31 +229,8 @@ function initProjectsPage() {
 
 // Experience page animations
 function initExperiencePage() {
-    // Timeline item stagger animation
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            item.style.transition = 'all 0.6s ease-out';
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, index * 150 + 300);
-    });
-
-    // Highlight cards stagger animation
-    const highlightCards = document.querySelectorAll('.highlight-card');
-    highlightCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            card.style.transition = 'all 0.6s ease-out';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 100 + 500);
-    });
+    // Initialize Apple-style scroll animations
+    initAppleStyleAnimations();
 
     // Skills badges animation
     const skillBadges = document.querySelectorAll('.skill-badge');
@@ -270,6 +247,53 @@ function initExperiencePage() {
 
     // Initialize tooltips
     initTooltips();
+}
+
+// Apple-style scroll animations
+function initAppleStyleAnimations() {
+    const experienceItems = document.querySelectorAll('.experience-item');
+    
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    experienceItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Add staggered animation for images within each item
+    experienceItems.forEach((item, itemIndex) => {
+        const images = item.querySelectorAll('.exp-img');
+        images.forEach((img, imgIndex) => {
+            img.style.opacity = '0';
+            img.style.transform = 'translateY(30px) scale(0.95)';
+            
+            // Observe each item for animation trigger
+            const imgObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            img.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                            img.style.opacity = '1';
+                            img.style.transform = 'translateY(0) scale(1)';
+                        }, imgIndex * 200 + 300);
+                        imgObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            imgObserver.observe(item);
+        });
+    });
 }
 
 // Tooltip functionality
