@@ -2722,6 +2722,15 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Specific styling for vertical images to reduce their size */
+.exp-img[src*="HHC"], .exp-img[src*="Hosei"] {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
 .exp-img:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 30px 60px rgba(100, 255, 218, 0.15);
