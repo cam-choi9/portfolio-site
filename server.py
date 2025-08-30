@@ -3,9 +3,15 @@ import http.server
 import socketserver
 import os
 import socket
+import mimetypes
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 class MyHTTPRequestHandler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        # Add PDF mime type
+        mimetypes.add_type('application/pdf', '.pdf')
+        super().__init__(*args, **kwargs)
+        
     def end_headers(self):
         self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
         self.send_header('Pragma', 'no-cache')

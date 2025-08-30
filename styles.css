@@ -2905,9 +2905,17 @@ body {
 
 @media (max-width: 768px) {
     .experience-container-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 1.5rem;
         margin: 3rem 0;
+    }
+    
+    .samsung-section .experience-container-row {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .akp-section .experience-container-row {
+        grid-template-columns: 1fr !important;
     }
     
     .experience-item.small-card .content-column {
