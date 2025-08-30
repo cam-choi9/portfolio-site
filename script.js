@@ -55,14 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize scroll animations
     initScrollAnimations();
     
-    // Resume button functionality
-    const resumeBtn = document.getElementById("resumeBtn");
-    if (resumeBtn) {
-        resumeBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            alert("Resume not yet uploaded. Please contact via LinkedIn for now.");
-        });
-    }
+    // Resume button functionality - now links directly to PDF file
 });
 
 // Get current page from URL
