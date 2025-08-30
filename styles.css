@@ -1674,6 +1674,22 @@ body {
         padding: 2rem;
     }
 
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-visual {
+        order: 1;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1rem auto;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
     .hero-name {
         font-size: 2.5rem;
     }
@@ -2853,6 +2869,10 @@ body {
     border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: 12px;
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .experience-item.small-card .content-column:hover {
@@ -2869,6 +2889,7 @@ body {
 .experience-item.small-card .highlight-description {
     font-size: 0.9rem;
     line-height: 1.6;
+    flex-grow: 1;
 }
 
 @media (max-width: 768px) {
