@@ -2804,3 +2804,51 @@ body {
         padding: 2rem;
     }
 }
+
+/* Experience Container Row Layout */
+.experience-container-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.experience-item.small-card {
+    margin: 0;
+}
+
+.experience-item.small-card .content-column {
+    padding: 2rem;
+    background: rgba(26, 26, 46, 0.4);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.experience-item.small-card .content-column:hover {
+    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.1);
+}
+
+.experience-item.small-card .highlight-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item.small-card .highlight-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .experience-container-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 3rem 0;
+    }
+    
+    .experience-item.small-card .content-column {
+        padding: 1.5rem;
+    }
+}
