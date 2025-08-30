@@ -2792,6 +2792,11 @@ body {
         text-align: center;
     }
     
+    /* For slide-right items, reverse the order so content comes first, then image */
+    .experience-item[data-animate="slide-right"] {
+        flex-direction: column-reverse;
+    }
+    
     .content-column {
         padding-right: 0;
     }
@@ -2812,6 +2817,12 @@ body {
     .experience-item.animate-in[data-animate="slide-right"] .content-column,
     .experience-item.animate-in[data-animate="slide-right"] .image-column {
         transform: translateY(0);
+    }
+    
+    /* AKP bottom containers should stack in rows on mobile */
+    .akp-section .experience-container-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
