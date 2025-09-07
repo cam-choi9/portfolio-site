@@ -1684,9 +1684,9 @@ body {
     }
 
     .profile-photo {
-        width: 250px;
-        height: 250px;
-        border-radius: 15%;
+        width: 220px;
+        height: 280px;
+        border-radius: 6%;
     }
 
     .hero-name {
@@ -2280,9 +2280,9 @@ body {
 /* Profile Photo Styles */
 .profile-photo {
     position: relative;
-    width: 320px;
-    height: 320px;
-    border-radius: 20%;
+    width: 280px;
+    height: 350px;
+    border-radius: 8%;
     overflow: hidden;
     border: 4px solid rgba(100, 255, 218, 0.3);
     box-shadow: 0 0 40px rgba(100, 255, 218, 0.2);
