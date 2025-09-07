@@ -1680,14 +1680,13 @@ body {
 
     .hero-visual {
         order: 1;
-        width: 200px;
-        height: 200px;
         margin: 0 auto 1rem auto;
     }
 
-    .profile-img {
-        width: 200px;
-        height: 200px;
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+        border-radius: 15%;
     }
 
     .hero-name {
@@ -2281,9 +2280,9 @@ body {
 /* Profile Photo Styles */
 .profile-photo {
     position: relative;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    border-radius: 20%;
     overflow: hidden;
     border: 4px solid rgba(100, 255, 218, 0.3);
     box-shadow: 0 0 40px rgba(100, 255, 218, 0.2);
@@ -2301,6 +2300,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: inherit;
 }
 
 /* Block Skills Section */
