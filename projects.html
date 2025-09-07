@@ -1,157 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Jaeseok Choi</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Top Right Navigation -->
-        <nav class="top-nav" id="topNav">
-            <div class="nav-brand">
-                <h2 class="nav-title">JC</h2>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
-                    <li><a href="experience.html" class="nav-link" data-page="experience">Experience</a></li>
-                    <li><a href="projects.html" class="nav-link active" data-page="projects">Projects</a></li>
-                    <li><a href="skills.html" class="nav-link" data-page="skills">Skills</a></li>
-                </ul>
-                <button class="nav-toggle" id="navToggle">☰</button>
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="animated-background" id="animatedBg"></div>
-            
-            <section class="content-section">
-                <div class="section-header">
-                    <h1 class="section-title">Featured Projects</h1>
-                    <p class="section-subtitle">Innovative solutions at the intersection of AI and practical applications</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projects - Jaeseok Choi</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Top Right Navigation -->
+            <nav class="top-nav" id="topNav">
+                <div class="nav-brand">
+                    <h2 class="nav-title">JC</h2>
                 </div>
+                <div class="nav-menu" id="navMenu">
+                    <a
+                        href="https://www.linkedin.com/in/jaeseokchoi/"
+                        target="_blank"
+                        class="nav-linkedin"
+                    >
+                        <svg
+                            class="nav-linkedin-icon"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                            />
+                        </svg>
+                    </a>
+                    <ul class="nav-links">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="nav-link"
+                                data-page="home"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="experience.html"
+                                class="nav-link"
+                                data-page="experience"
+                                >Experience</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="projects.html"
+                                class="nav-link active"
+                                data-page="projects"
+                                >Projects</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="skills.html"
+                                class="nav-link"
+                                data-page="skills"
+                                >Skills</a
+                            >
+                        </li>
+                    </ul>
+                    <button class="nav-toggle" id="navToggle">☰</button>
+                </div>
+            </nav>
 
-                <div class="projects-grid">
-                    <div class="project-card featured">
-                        <div class="project-status">
-                            <span class="status-badge in-progress">In Development</span>
-                        </div>
-                        
-                        <div class="project-header">
-                            <h3 class="project-title">AI Budget Tracker</h3>
-                            <p class="project-subtitle">Intelligent Financial Management Platform</p>
-                        </div>
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="animated-background" id="animatedBg"></div>
 
-                        <div class="project-description">
-                            <p>A comprehensive full-stack application that leverages artificial intelligence to provide intelligent budget tracking, expense categorization, and financial insights. The platform integrates real-time banking data with AI-powered analysis to help users make informed financial decisions.</p>
-                        </div>
+                <section class="content-section">
+                    <div class="section-header">
+                        <h1 class="section-title">Featured Projects</h1>
+                        <p class="section-subtitle">
+                            Innovative solutions at the intersection of AI and
+                            practical applications
+                        </p>
+                    </div>
 
-                        <div class="project-features">
-                            <h4>Key Features</h4>
-                            <ul class="feature-list">
-                                <li>
-                                    <span class="feature-icon">🤖</span>
-                                    AI-powered expense categorization and pattern recognition
-                                </li>
-                                <li>
-                                    <span class="feature-icon">🏦</span>
-                                    Real-time bank account integration via Plaid API
-                                </li>
-                                <li>
-                                    <span class="feature-icon">📊</span>
-                                    Intelligent budget recommendations and alerts
-                                </li>
-                                <li>
-                                    <span class="feature-icon">📱</span>
-                                    Responsive web interface with intuitive dashboards
-                                </li>
-                                <li>
-                                    <span class="feature-icon">🔒</span>
-                                    Enterprise-grade security and data encryption
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="projects-grid">
+                        <div class="project-card featured">
+                            <div class="project-status">
+                                <span class="status-badge in-progress"
+                                    >In Development</span
+                                >
+                            </div>
 
-                        <div class="project-architecture">
-                            <h4>Technical Architecture</h4>
-                            <div class="architecture-grid">
-                                <div class="architecture-layer">
-                                    <div class="layer-title">Frontend</div>
-                                    <div class="layer-tech">React.js</div>
-                                    <div class="layer-desc">Modern, responsive user interface</div>
+                            <div class="project-header">
+                                <h3 class="project-title">AI Budget Tracker</h3>
+                                <p class="project-subtitle">
+                                    Intelligent Financial Management Platform
+                                </p>
+                            </div>
+
+                            <div class="project-description">
+                                <p>
+                                    A comprehensive full-stack application that
+                                    leverages artificial intelligence to provide
+                                    intelligent budget tracking, expense
+                                    categorization, and financial insights. The
+                                    platform integrates real-time banking data
+                                    with AI-powered analysis to help users make
+                                    informed financial decisions.
+                                </p>
+                            </div>
+
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">🤖</span>
+                                        AI-powered expense categorization and
+                                        pattern recognition
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🏦</span>
+                                        Real-time bank account integration via
+                                        Plaid API
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📊</span>
+                                        Intelligent budget recommendations and
+                                        alerts
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📱</span>
+                                        Responsive web interface with intuitive
+                                        dashboards
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🔒</span>
+                                        Enterprise-grade security and data
+                                        encryption
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="project-architecture">
+                                <h4>Technical Architecture</h4>
+                                <div class="architecture-grid">
+                                    <div class="architecture-layer">
+                                        <div class="layer-title">Frontend</div>
+                                        <div class="layer-tech">React.js</div>
+                                        <div class="layer-desc">
+                                            Modern, responsive user interface
+                                        </div>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-title">
+                                            Backend API
+                                        </div>
+                                        <div class="layer-tech">FastAPI</div>
+                                        <div class="layer-desc">
+                                            High-performance Python backend
+                                        </div>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-title">Database</div>
+                                        <div class="layer-tech">PostgreSQL</div>
+                                        <div class="layer-desc">
+                                            Robust relational database
+                                        </div>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-title">AI Engine</div>
+                                        <div class="layer-tech">OpenAI API</div>
+                                        <div class="layer-desc">
+                                            Advanced language processing
+                                        </div>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-title">Banking</div>
+                                        <div class="layer-tech">Plaid API</div>
+                                        <div class="layer-desc">
+                                            Secure financial data integration
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="architecture-layer">
-                                    <div class="layer-title">Backend API</div>
-                                    <div class="layer-tech">FastAPI</div>
-                                    <div class="layer-desc">High-performance Python backend</div>
+                            </div>
+
+                            <div class="project-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label"
+                                        >Development Progress</span
+                                    >
+                                    <span class="progress-percentage">75%</span>
                                 </div>
-                                <div class="architecture-layer">
-                                    <div class="layer-title">Database</div>
-                                    <div class="layer-tech">PostgreSQL</div>
-                                    <div class="layer-desc">Robust relational database</div>
+                                <div class="progress-bar">
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 75%"
+                                    ></div>
                                 </div>
-                                <div class="architecture-layer">
-                                    <div class="layer-title">AI Engine</div>
-                                    <div class="layer-tech">OpenAI API</div>
-                                    <div class="layer-desc">Advanced language processing</div>
-                                </div>
-                                <div class="architecture-layer">
-                                    <div class="layer-title">Banking</div>
-                                    <div class="layer-tech">Plaid API</div>
-                                    <div class="layer-desc">Secure financial data integration</div>
+                                <div class="progress-milestones">
+                                    <div class="milestone completed">
+                                        ✓ Backend API Development
+                                    </div>
+                                    <div class="milestone completed">
+                                        ✓ Database Schema Design
+                                    </div>
+                                    <div class="milestone completed">
+                                        ✓ AI Integration
+                                    </div>
+                                    <div class="milestone current">
+                                        🔄 Frontend Development
+                                    </div>
+                                    <div class="milestone">
+                                        ⏳ Security Implementation
+                                    </div>
+                                    <div class="milestone">
+                                        ⏳ Testing & Deployment
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                    More Projects Coming Soon
+                                </h3>
+                                <p class="project-subtitle">
+                                    Exploring New Frontiers in AI & Development
+                                </p>
+                            </div>
 
-                        <div class="project-progress">
-                            <div class="progress-header">
-                                <span class="progress-label">Development Progress</span>
-                                <span class="progress-percentage">75%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 75%"></div>
-                            </div>
-                            <div class="progress-milestones">
-                                <div class="milestone completed">✓ Backend API Development</div>
-                                <div class="milestone completed">✓ Database Schema Design</div>
-                                <div class="milestone completed">✓ AI Integration</div>
-                                <div class="milestone current">🔄 Frontend Development</div>
-                                <div class="milestone">⏳ Security Implementation</div>
-                                <div class="milestone">⏳ Testing & Deployment</div>
+                            <div class="project-description">
+                                <p>
+                                    I'm constantly working on innovative
+                                    projects that push the boundaries of what's
+                                    possible with AI and modern web
+                                    technologies. Stay tuned for exciting new
+                                    developments!
+                                </p>
                             </div>
                         </div>
                     </div>
+                </section>
 
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">More Projects Coming Soon</h3>
-                            <p class="project-subtitle">Exploring New Frontiers in AI & Development</p>
-                        </div>
-
-                        <div class="project-description">
-                            <p>I'm constantly working on innovative projects that push the boundaries of what's possible with AI and modern web technologies. Stay tuned for exciting new developments!</p>
-                        </div>
-
+                <!-- Footer Section -->
+                <section class="footer-section">
+                    <div class="footer-content">
+                        <p class="footer-text">
+                            Designed and developed by Jaeseok Choi. Developed
+                            and maintained on Replit, version-controlled with
+                            Git, and deployed on Vercel. Typography uses the
+                            system font stack for performance.
+                        </p>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Footer Section -->
-            <section class="footer-section">
-                <div class="footer-content">
-                    <p class="footer-text">
-                        Designed and developed by Jaeseok Choi using vanilla HTML, CSS, and JavaScript. Hosted via Replit Deployment. All typography uses the system font stack for optimal performance.
-                    </p>
-                </div>
-            </section>
-        </main>
-    </div>
+                </section>
+            </main>
+        </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
